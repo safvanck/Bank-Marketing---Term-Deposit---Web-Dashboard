@@ -23,8 +23,6 @@ class AnalyticsDashboard(TemplateView):
 
         context['piechart1'] = plots.pie_chart_subscibed()
         context['piechart2'] = plots.pie_chart_not_subscribed()
-
-        context['3dplot'] = plots.get_topographical_3D_surface_plot()
         context['scatterplot'] = plots.scatter_plot_all()
         context['data_heatmap'] = plots.data_heatmap()
 
