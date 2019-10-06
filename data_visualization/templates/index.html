@@ -2,21 +2,36 @@
 {% block head %}
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 {% endblock %}
 
 {% block content %}
 <div class='w3-container' align='center'>
 
 <div class="container text-center">
-    <!--nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Django Plotly Example</a>
-    </nav-->
+    <h2>Bank Term Deposit Marketing</h2>
+
 
     <div class="w3-panel w3-card-2" style="width: 76%;margin-top: 25px">
 
         <div class="card-body">
-          {{time1|safe}}
+          <!-- {{time1|safe}} -->
+          <br/><br/><br/>
+          <a href="/dashboard/"><button class="button">Analytics Dashboard</button></a>
+          <br/><br/>
         </div>
     </div>
 </div>
