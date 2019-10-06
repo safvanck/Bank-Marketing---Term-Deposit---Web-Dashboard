@@ -24,6 +24,7 @@ class AnalyticsDashboard(TemplateView):
         context['piechart1'] = plots.pie_chart_subscibed()
         context['piechart2'] = plots.pie_chart_not_subscribed()
         context['scatterplot'] = plots.scatter_plot_all()
+        context['plot2'] = plots.plot2()
         context['data_heatmap'] = plots.data_heatmap()
 
         return context

@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 from plotly.offline import plot
 from datetime import datetime
 from .data_utils.process_data import (
-    job_pie_diagram_subscribed, job_pie_diagram_not_subscribed, make_scatter_plot, get_data_heatmap, get_data)
+    job_pie_diagram_subscribed, job_pie_diagram_not_subscribed, make_scatter_plot, get_data_heatmap, get_plot2, get_data)
 
 
 data_df = get_data()
@@ -37,3 +37,7 @@ def data_heatmap():
 
     plot_div = plot(fig, output_type='div', filename='heatmap')
     return plot_div
+
+
+def plot2():
+    return get_plot2(data_df)

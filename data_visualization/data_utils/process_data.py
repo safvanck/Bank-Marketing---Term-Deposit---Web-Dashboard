@@ -30,3 +30,7 @@ def get_data_heatmap(data_df):
     y = list(map(str.upper, corr.columns))
     x = list(map(str.upper, corr.columns))
     return x, y, z
+
+
+def get_plot2(data_df):
+    return data_df
