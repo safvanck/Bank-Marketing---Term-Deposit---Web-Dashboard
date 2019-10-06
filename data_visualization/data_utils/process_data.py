@@ -33,4 +33,6 @@ def get_data_heatmap(data_df):
 
 
 def get_plot2(data_df):
-    return data_df
+    age = list(data_df['age'])
+    balance = list(data_df['balance'])
+    return age,balance

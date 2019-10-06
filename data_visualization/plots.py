@@ -40,4 +40,11 @@ def data_heatmap():
 
 
 def plot2():
-    return get_plot2(data_df)
+    labels, values = get_plot2(data_df)
+    fig = go.Figure(
+        data=[go.Bar(x=labels, y=values)],
+        layout_title_text="Age vs Avg Yearly Balance (in Euros)"
+    )
+
+    plot_div = plot(fig, output_type='div', filename='age-y')
+    return plot_div
