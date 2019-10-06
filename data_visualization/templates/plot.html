@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+{% endblock %}
+
+{% block content %}
+<div class='w3-container' align='center'>
+
+<div class="container text-center">
+    <!--nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Django Plotly Example</a>
+    </nav-->
+
+    <div class="w3-row-padding w3-section" style="width: 80%;">
+      <div class="w3-half">
+        <div class="w3-card">
+          <br/>
+          <div class="w3-container">
+            <div class="card-body">
+                <h5 class="card-title"> % of Job Categories Bank Term Deposit Subscribed</h5>
+              {{piechart1|safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-half">
+        <div class="w3-card">
+          <br/>
+          <div class="w3-container">
+            <div class="card-body">
+                <h5 class="card-title">% of Job Categories Bank Term Deposit not Subscribed</h5>
+              {{piechart2|safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="w3-panel w3-card-2" style="width: 80%;">
+        <div class="card-body">
+            <h5 class="card-title">Topographical 3D Surface Plot</h5>
+          {{3dplot|safe}}
+        </div>
+    </div>
+    <div class="w3-panel w3-card-2" style="width: 80%;">
+        <div class="card-body">
+            <h5 class="card-title">Scatter Plot</h5>
+          {{scatterplot|safe}}
+        </div>
+    </div>
+    <div class="w3-panel w3-card-2" style="width: 80%;">
+        <div class="card-body">
+            <h5 class="card-title">Correlation between numerical features</h5>
+          {{data_heatmap|safe}}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+{% endblock %}
+
+{% block content %}
+<div class='w3-container' align='center'>
+
+<div class="container text-center">
+    <!--nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Django Plotly Example</a>
+    </nav-->
+
+    <div class="w3-panel w3-card-2" style="width: 76%;margin-top: 25px">
+
+        <div class="card-body">
+          {{time1|safe}}
+        </div>
+    </div>
+</div>
+{% endblock %}
