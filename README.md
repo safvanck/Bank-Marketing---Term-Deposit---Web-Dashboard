@@ -2,11 +2,11 @@
 
 ![Analytics Dashboard](https://www.elegantthemes.com/blog/wp-content/uploads/2016/02/google-analytics-custom-dashboard.jpg)
 
-**To run, **
+** To run, **
 
-pip install -r requirements.txt                         
+*pip install -r requirements.txt*
 
-python manage.py runserver
+*python manage.py runserver*
 
 ## Some Screenshots:
 
