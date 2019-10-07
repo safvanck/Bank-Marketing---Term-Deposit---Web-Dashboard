@@ -39,12 +39,30 @@ def data_heatmap():
     return plot_div
 
 
+# def plot2():
+#     labels, values = get_plot2(data_df)
+#     fig = go.Figure(
+#         data=[go.Bar(x=labels, y=values)],
+#         layout_title_text="Age vs Avg Yearly Balance (in Euros)"
+#     )
+
+#     plot_div = plot(fig, output_type='div', filename='age-y')
+#     return plot_div
+
+
 def plot2():
-    labels, values = get_plot2(data_df)
-    fig = go.Figure(
-        data=[go.Bar(x=labels, y=values)],
-        layout_title_text="Age vs Avg Yearly Balance (in Euros)"
-    )
+    x, y = get_plot2(data_df)
+    fig = go.Figure(layout_title_text="Age vs Avg Yearly Balance (in Euros)")
+    fig.add_trace(go.Scatter(
+        x=x,
+        y=y,
+        mode="markers",
+        marker=go.scatter.Marker(
+            size=4,
+            color=45,
+            opacity=0.6,
+            colorscale="Viridis"
+        )))
 
     plot_div = plot(fig, output_type='div', filename='age-y')
     return plot_div
