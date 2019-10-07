@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 from plotly.offline import plot
 from datetime import datetime
 from .data_utils.process_data import (
-    job_pie_diagram_subscribed, job_pie_diagram_not_subscribed, make_scatter_plot, get_data_heatmap, get_plot2, get_data)
+    job_pie_diagram_subscribed, job_pie_diagram_not_subscribed, make_scatter_plot, get_data_heatmap, get_plot2, get_plot3, get_data)
 
 
 data_df = get_data()
@@ -39,17 +39,6 @@ def data_heatmap():
     return plot_div
 
 
-# def plot2():
-#     labels, values = get_plot2(data_df)
-#     fig = go.Figure(
-#         data=[go.Bar(x=labels, y=values)],
-#         layout_title_text="Age vs Avg Yearly Balance (in Euros)"
-#     )
-
-#     plot_div = plot(fig, output_type='div', filename='age-y')
-#     return plot_div
-
-
 def plot2():
     x, y = get_plot2(data_df)
     fig = go.Figure(layout_title_text="Age vs Avg Yearly Balance (in Euros)")
@@ -65,4 +54,15 @@ def plot2():
         )))
 
     plot_div = plot(fig, output_type='div', filename='age-y')
+    return plot_div
+
+
+def plot3():
+    labels, values = get_plot3(data_df)
+    fig = go.Figure(
+        data=[go.Bar(x=labels, y=values)],
+        layout_title_text="Age vs Last campaign call duration (in Seconds)"
+    )
+
+    plot_div = plot(fig, output_type='div', filename='age-duration')
     return plot_div

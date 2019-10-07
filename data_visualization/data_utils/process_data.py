@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from .variables import dataset_path
 
 
@@ -35,4 +36,10 @@ def get_data_heatmap(data_df):
 def get_plot2(data_df):
     age = list(data_df['age'])
     balance = list(data_df['balance'])
-    return age,balance
+    return age, balance
+
+
+def get_plot3(data_df):
+    age = list(data_df['age'])
+    duration = np.array(data_df['duration']) / 60
+    return age, duration
