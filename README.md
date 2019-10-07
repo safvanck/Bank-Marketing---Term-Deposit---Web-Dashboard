@@ -11,3 +11,7 @@ python manage.py runserver
 Some Screenshots:
 
 ![screenshot-1](https://user-images.githubusercontent.com/18166377/66329114-9863b100-e94b-11e9-926d-b953addcb4de.png)
+
+![Screenshot-2](https://user-images.githubusercontent.com/18166377/66329225-c9dc7c80-e94b-11e9-94b3-91b5565d32a7.png)
+
+![Screenshot-3](https://user-images.githubusercontent.com/18166377/66329327-f85a5780-e94b-11e9-9ed7-36b54d2f7554.png)
