@@ -26,6 +26,7 @@ class AnalyticsDashboard(TemplateView):
         context['scatterplot'] = plots.scatter_plot_all()
         context['plot2'] = plots.plot2()
         context['plot3'] = plots.plot3()
+        context['plot4'] = plots.plot4()
         context['data_heatmap'] = plots.data_heatmap()
 
         return context

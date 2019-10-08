@@ -41,7 +41,10 @@ def data_heatmap():
 
 def plot2():
     x, y = get_plot2(data_df)
-    fig = go.Figure(layout_title_text="Age vs Avg Yearly Balance (in Euros)")
+    layout = go.Layout()
+    layout.xaxis.title = 'Age (Years)'
+    layout.yaxis.title = 'Avg Yearly Balance (in Euros)'
+    fig = go.Figure(layout_title_text="Age vs Avg Yearly Balance",layout=layout)
     fig.add_trace(go.Scatter(
         x=x,
         y=y,
@@ -59,10 +62,36 @@ def plot2():
 
 def plot3():
     labels, values = get_plot3(data_df)
+    layout = go.Layout()
+    layout.xaxis.title = 'Age (Years)'
+    layout.yaxis.title = 'Last campaign call duration (in Seconds)'
+
     fig = go.Figure(
         data=[go.Bar(x=labels, y=values)],
-        layout_title_text="Age vs Last campaign call duration (in Seconds)"
+        layout_title_text="Age vs Last campaign call duration",
+        layout=layout
     )
 
     plot_div = plot(fig, output_type='div', filename='age-duration')
+    return plot_div
+
+
+def plot4():
+
+    x0 = data_df[data_df['y'] == 'yes']['age']
+    x1 = data_df[data_df['y'] == 'no']['age']
+    trace0 = go.Histogram(
+        x=x0, name='Subscribed'
+    )
+    trace1 = go.Histogram(
+        x=x1, name='Not Subscrbed'
+    )
+    data = [trace0, trace1]
+    layout = go.Layout(barmode='stack')
+    layout.xaxis.title = 'Age (Years)'
+    layout.yaxis.title = '# of People'
+    fig = go.Figure(data=data, layout=layout,
+                    layout_title_text='Age Histogram by Subscription',)
+    plot_div = plot(fig, output_type='div',
+                    filename='stacked histogram-age-vs_subscription')
     return plot_div
